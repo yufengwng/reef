@@ -1,0 +1,26 @@
+script
+  : stmt* EOF
+
+stmt
+  : cmd
+
+cmd
+  : cmd_name cmd_arg*
+
+cmd_name
+  : WORD
+
+cmd_arg
+  : WORD
+
+
+WORD
+  : 
+
+# word escaping:
+# \     - for a literal space
+# \$    - for a literal dollar
+# \\    - escapes the backslash
+# \<\n> - escapes the newline and continue reading
+
+# vim: set et sw=2 sts=2 ts=2:
